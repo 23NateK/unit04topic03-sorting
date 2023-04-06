@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class StringListSort {
     public static void selectionSort(ArrayList<String> items) {
@@ -20,9 +19,20 @@ public class StringListSort {
             }
         }
     }
-    
+    public static void insertionSort(ArrayList<String> items){
+        for(int i=items.size()-1;i>0;i--){
+            for(int j=items.size()-1;j>0;j--){
+                if(items.get(j).compareTo(items.get(j-1))<0){
+                String temp=items.get(j-1);
+                items.set(j-1, items.get(j));
+                items.set(j, temp);
+                System.out.println(items);
+                }
+            }
+        }
+    }
     
     public static void main(String[] args) {
-        
+
     }
 }

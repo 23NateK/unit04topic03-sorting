@@ -18,4 +18,13 @@ public class StringListSortTest {
         assertEquals(expected, actual);
 
     }
+    @Test
+    public void testinsertionSort() {
+        imput = new ArrayList<>(Arrays.asList("there", "is", "the", "mountain"));
+        expected = new ArrayList<>(Arrays.asList( "is", "mountain", "the","there"));
+        StringListSort.insertionSort(imput);
+        actual = imput;
+        assertEquals(expected, actual);
+
+    }
 }
