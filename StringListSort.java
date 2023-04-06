@@ -4,11 +4,11 @@ import java.util.Arrays;
 public class StringListSort {
     public static void selectionSort(ArrayList<String> items) {
         if (items.size()>1){
-            for(int i=0;i<items.size()-1;i++){
-                String minValue=items.get(0);
-                int minindex=0;
-                for(int n=0;n<items.size()-1;n++){
-                    if(items.get(n).compareTo(items.get(minindex))>0){
+            for(int i=0;i<items.size();i++){
+                String minValue=items.get(i);
+                int minindex=i;
+                for(int n=i+1;n<items.size();n++){
+                    if(items.get(n).compareTo(items.get(minindex))<0){
                         minValue=items.get(n);
                         minindex=n;
                     }
@@ -23,7 +23,6 @@ public class StringListSort {
     
     
     public static void main(String[] args) {
-        ArrayList<String> a = new ArrayList<>(Arrays.asList("there", "is", "the", "mountain"));
-        selectionSort(a);
+        
     }
 }
